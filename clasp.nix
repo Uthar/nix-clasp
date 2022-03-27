@@ -95,6 +95,15 @@ clasp =
 
       echo "PREFIX = \"$out\"" > wscript.config
     '';
+
+    # save-lisp-and-die only works for precise GC
+    buildPhase = ''
+      ./waf build_cboehmprecise
+    '';
+    installPhase = ''
+      ./waf install_cboehmprecise
+    '';
+
     buildInputs = with pkgs; [
       python310 git sbcl gmp libffi boehmgc libelf libbsd
       boost175.dev boost175
