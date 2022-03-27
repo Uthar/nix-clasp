@@ -7,8 +7,8 @@ let
     python3;
 
   Cleavir = builtins.fetchTarball {
-    url = https://github.com/s-expressionists/Cleavir/archive/8ee2f2f44532011717218aa672c6bfd0ef787d1e.tar.gz;
-    sha256 = "0h7npra1a7pfscvf5cxbbf126p5bjzvvsspwfk0zpn7zg717a1iz";
+    url = https://github.com/s-expressionists/Cleavir/archive/b6b610fc2ec6acf32a83bd636f94985e1be05950.tar.gz;
+    sha256 = "1l4apipjs5mzmapcg60zyqbqr61lbvrdhchyyphz7dfg5lgh3vn8";
   };
   Concrete-Syntax-Tree = builtins.fetchTarball {
     url = https://github.com/s-expressionists/Concrete-Syntax-Tree/archive/4f01430c34f163356f3a2cfbf0a8a6963ff0e5ac.tar.gz;
@@ -27,8 +27,8 @@ let
     sha256 = "00raw4nfg9q73w1pj4r001g90g97n2rq6q3zijg5j6j7iq81df9s";
   };
   alexandria = builtins.fetchTarball {
-    url = https://github.com/clasp-developers/alexandria/archive/e5c54bc30b0887c237bde2827036d17315f88737.tar.gz;
-    sha256 = "14h7a9fwimiw9gqxjm2h47d95bfhrm7b81f6si7x8vy18d78fn4g";
+    url = https://gitlab.common-lisp.net/alexandria/alexandria/-/archive/v1.4/alexandria-v1.4.tar.gz;
+    sha256 = "0r1adhvf98h0104vq14q7y99h0hsa8wqwqw92h7ghrjxmsvz2z6l";
   };
   esrap = builtins.fetchTarball {
     url = https://github.com/scymtym/esrap/archive/c99c33a33ff58ca85e8ba73912eba45d458eaa72.tar.gz;
@@ -43,18 +43,18 @@ let
     sha256 = "1q2xqdw832jrp0w9yhgr8xihria01j4z132ac16lr9ssqznkprv6";
   };
   asdf = builtins.fetchTarball {
-    url = https://gitlab.common-lisp.net/asdf/asdf/-/archive/3.3.3.5/asdf-3.3.3.5.tar.gz;
-    sha256 = "0jqj9qwxzx81rpsab784akyxbv2xh60m5yx3w5gjh0agq0y5bdki";
+    url = https://gitlab.common-lisp.net/asdf/asdf/-/archive/3.3.5/asdf-3.3.5.tar.gz;
+    sha256 = "1b62p3ln1mwiqfwja8fbnhgrli761hk1h6vqw1597bz8lvwlbf70";
   };
 
 clasp =
 
   llvmPackages_13.stdenv.mkDerivation {
     pname = "clasp";
-    version = "1.0-pre-47594975";
+    version = "1.0.0";
     src = builtins.fetchTarball {
-      url = https://github.com/clasp-developers/clasp/archive/47594975d2c1b820e9851b97e050dcf07482828a.tar.gz;
-      sha256 = "12bv94ikwvn5bvjbadgvbr7409w71zzzkjld1sympr07dfzna7db";
+      url = https://github.com/clasp-developers/clasp/archive/1.0.0.tar.gz;
+      sha256 = "1yyxclwfk64rqia3j76wkd877zjv4r0yav7r6wj6ksgcfylbsn0j";
     };
     preConfigure = ''
     ./waf configure
